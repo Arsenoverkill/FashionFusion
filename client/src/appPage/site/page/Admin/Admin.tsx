@@ -1,6 +1,5 @@
 "use client";
 import { usePostTodoMutation } from "@/redux/api/todo";
-import React from "react";
 
 const Admin = () => {
   const [postTodoMutatin] = usePostTodoMutation();
