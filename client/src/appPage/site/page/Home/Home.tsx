@@ -6,10 +6,12 @@ import { useRouter } from "next/navigation";
 import { useGetTodoQuery } from "@/redux/api/todo";
 
 const Home = () => {
-  const { data } = useGetTodoQuery();
+  const { data, isLoading } = useGetTodoQuery();
   const [category, setCategory] = useState("All");
 
   const router = useRouter();
+
+  if (isLoading) return;
 
   return (
     <div id={scss.Home}>

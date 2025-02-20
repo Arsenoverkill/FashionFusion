@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import scss from "./Basket.module.scss";
 import Image from "next/image";
 import { toast, ToastContainer } from "react-toastify";
-import { useLayoutContext } from "../../layout/Layout";
+import { useLayoutContext } from "../../layout/LayoutPage";
 
 const Basket = () => {
   const { count, setCount } = useLayoutContext();
