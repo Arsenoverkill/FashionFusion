@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 50px;
+  .home {
+    font-size: 32px;
+    margin-right: 140px;
+  }
+  nav {
+    display: flex;
+    gap: 30px;
+    img {
+      cursor: pointer;
+    }
+    a {
+      position: relative;
+      font-size: 19px;
+      letter-spacing: 1px;
+      &:hover::before {
+        width: 100%;
+        left: 0;
+      }
+      &::before {
+        content: "";
+        width: 0;
+        height: 2px;
+        border-radius: 2px;
+        background-color: black;
+        position: absolute;
+        bottom: -0.25rem;
+        right: 0;
+        transition: right 0.4s, width 0.4s, left 0.4s;
+      }
+      .basket {
+        display: flex;
+        align-items: center;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+    .instagram {
+      width: 20px;
+      height: 20px;
+      margin-top: 3px;
+      margin-inline: 25px;
+    }
+  }
+}

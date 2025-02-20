@@ -1,0 +1,95 @@
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.Contact {
+  margin-top: 40px;
+  .content {
+    display: flex;
+    justify-content: space-between;
+    .contact__text {
+      width: 600px;
+      h1 {
+        font-weight: 400;
+      }
+      p {
+        margin-top: 30px;
+        line-height: 2pc;
+        font-weight: 300;
+        font-size: 17px;
+      }
+    }
+    .contact__inputs {
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+        .inputs__name {
+          display: flex;
+          gap: 10px;
+          input {
+            width: 280px;
+          }
+          div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            span {
+              margin-top: 10px;
+              font-size: 16px;
+              font-weight: 300;
+            }
+          }
+        }
+        p {
+          font-weight: 300;
+          color: rgb(232, 0, 0);
+          animation: shake 0.3s ease-in-out;
+        }
+      }
+    }
+    h2 {
+      font-weight: 300;
+      font-size: 18px;
+      margin-bottom: 10px;
+      span {
+        color: gray;
+        font-weight: 300;
+      }
+    }
+    input {
+      padding: 15px;
+      width: 570px;
+      outline: none;
+    }
+    textarea {
+      padding: 20px;
+      width: 570px;
+      height: 150px;
+      outline: none;
+    }
+    button {
+      padding: 15px 50px;
+      font-size: 19px;
+      border: none;
+      border-radius: 5px;
+      background: black;
+      color: white;
+    }
+  }
+}

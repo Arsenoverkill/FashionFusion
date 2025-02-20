@@ -1,0 +1,70 @@
+#Home {
+  padding-block: 50px;
+  .home {
+    .category {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h4 {
+        font-size: 18px;
+        font-weight: 300;
+        cursor: pointer;
+      }
+      div {
+        height: 17px;
+        width: 2.5px;
+        background: gray;
+        opacity: 30%;
+        margin-inline: 25px;
+        border-radius: 10px;
+      }
+    }
+    hr {
+      margin: 40px 0 30px 0;
+    }
+    .dressBlocks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 50px;
+      .dressBlock {
+        animation: appearanceBlocks 1s;
+        cursor: pointer;
+        .images {
+          position: relative;
+          width: 300px;
+          height: 350px;
+          img {
+            transition: 0.8s;
+            position: absolute;
+            object-fit: cover;
+          }
+          .imageHover {
+            opacity: 0;
+            visibility: hidden;
+          }
+          &:hover {
+            .imageHover {
+              opacity: 100;
+              visibility: visible;
+            }
+            .image {
+              opacity: 0;
+              visibility: hidden;
+            }
+          }
+        }
+        h2 {
+          margin-block: 15px;
+          font-size: 27px;
+        }
+      }
+    }
+  }
+}
+@keyframes appearanceBlocks {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}

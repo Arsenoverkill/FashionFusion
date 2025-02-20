@@ -1,0 +1,174 @@
+#Detail {
+  h3 {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    gap: 7px;
+    a {
+      font-weight: 300;
+      cursor: pointer;
+    }
+    span {
+      font-weight: 300;
+      font-size: 13px;
+    }
+  }
+  .detailPart {
+    .product {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .product__images {
+        display: flex;
+        gap: 10px;
+        img {
+          object-fit: cover;
+          transition: 0.3s;
+        }
+        .images__mini {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          img {
+            cursor: pointer;
+          }
+        }
+        .images__appearance {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+          width: 550px;
+          height: 600px;
+          img {
+            &:nth-child(1) {
+              transform: rotate(180deg);
+              margin-left: 20px;
+              cursor: pointer;
+            }
+            &:nth-child(2) {
+              margin-right: 20px;
+              cursor: pointer;
+            }
+            &:nth-child(3) {
+              position: absolute;
+              z-index: -1;
+            }
+            &:nth-child(4) {
+              position: absolute;
+              z-index: -1;
+            }
+          }
+        }
+      }
+      .product__plot {
+        h1 {
+          font-size: 40px;
+        }
+        h2 {
+          margin-block: 15px;
+        }
+        h3 {
+          font-weight: 400;
+          margin-top: 40px;
+        }
+        p {
+          font-weight: 300;
+          line-height: 1.7pc;
+          font-size: 17px;
+          width: 33pc;
+          margin-top: 5px;
+        }
+        ul {
+          margin-left: 60px;
+          li {
+            margin-block: 10px;
+            font-weight: 300;
+            font-size: 17px;
+          }
+        }
+        .product__size {
+          display: flex;
+          gap: 20px;
+          margin-top: 15px;
+          div {
+            cursor: pointer;
+            padding: 20px 30px;
+            border: 1px solid black;
+            transition: 0.4s;
+            &:hover {
+              background: black;
+              color: white;
+            }
+          }
+        }
+        .product__quantity {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+          margin-top: 20px;
+          button {
+            --button_radius: 0.5em;
+            --button_color: #e8e8e8;
+            --button_outline_color: #000000;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: var(--button_radius);
+            background: var(--button_outline_color);
+            &:active .quantity__button {
+              transform: translateY(0);
+            }
+          }
+
+          .quantity__button {
+            display: block;
+            box-sizing: border-box;
+            border: 1px solid var(--button_outline_color);
+            border-radius: var(--button_radius);
+            padding: 0.65em 1.3em;
+            background: #f3f3f3;
+            color: var(--button_outline_color);
+            transform: translateY(-0.1em);
+            transition: transform 0.1s ease;
+            cursor: pointer;
+          }
+        }
+        .product__button {
+          display: flex;
+          justify-content: center;
+          margin-top: 40px;
+          padding-block: 20px;
+          width: 100%;
+          background: black;
+          font-size: 20px;
+          color: white;
+          transform: translateY(-0.1em);
+          transition: transform 0.1s ease;
+          border-radius: 10px;
+          cursor: pointer;
+          position: relative;
+          h4 {
+            position: absolute;
+            text-align: center;
+            top: 35%;
+            transition: 0.8s;
+          }
+          div {
+            transition: 0.8s;
+            h5 {
+              font-size: 18px;
+            }
+          }
+          &:active {
+            transform: translateY(0);
+            transform: translateX(0.04em);
+          }
+          &:hover {
+            background: #1f1f1f;
+          }
+        }
+      }
+    }
+  }
+}

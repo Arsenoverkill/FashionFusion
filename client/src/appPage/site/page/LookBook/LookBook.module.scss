@@ -1,0 +1,20 @@
+.LookBook {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+}
