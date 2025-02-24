@@ -14,7 +14,7 @@ const Header = () => {
         <div className={scss.header}>
           <nav>
             <Link href="/">Shop</Link>
-            <Link href="/lookbook">LookBook</Link>
+            <Link href="/look-book">LookBook</Link>
             <Link href="/about">About</Link>
             <Link href="/contact">Contact</Link>
           </nav>
