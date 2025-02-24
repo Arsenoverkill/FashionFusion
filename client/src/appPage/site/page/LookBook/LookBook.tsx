@@ -1,13 +1,12 @@
 "use client";
+import { useEffect, useState } from "react";
+import foto1 from "@/../public/lauren-winter-20150715-IMG_0636-v1-FINAL.webp";
+import foto2 from "@/../public/lauren-winter-20150715-IMG_7316-v1-FINAL.webp";
+import foto3 from "@/../public/lauren-winter-20150715-IMG_9299-v1-FINAL.webp";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
 import scss from "./LookBook.module.scss";
 
-const images = [
-  "https://images.squarespace-cdn.com/content/v1/624b503d84c2ba7dc187a92a/1649102934556-AV3T619Q1OCOOO86640S/lauren-winter-20150715-IMG_7316-v1-FINAL.jpg",
-  "https://images.squarespace-cdn.com/content/v1/624b503d84c2ba7dc187a92a/1649102934573-IOHDFX1WKICPHE76ADBS/lauren-winter-20150715-IMG_9299-v1-FINAL.jpg",
-  "https://images.squarespace-cdn.com/content/v1/624b503d84c2ba7dc187a92a/1649102934584-R3LPIOPU8EVG587CJIE0/lauren-winter-20150715-IMG_0636-v1-FINAL.jpg",
-];
+const images = [foto1, foto2, foto3];
 
 const LookBook = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);

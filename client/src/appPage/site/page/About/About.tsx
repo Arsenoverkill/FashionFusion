@@ -1,5 +1,5 @@
-import React from "react";
 import Image from "next/image";
+import img from "@/../public/image-asset.webp";
 import styles from "./About.module.scss";
 
 const About = () => {
@@ -11,12 +11,7 @@ const About = () => {
       </div>
       <div className={styles.content}>
         <div className={styles.imageContainer}>
-          <Image
-            src="https://images.squarespace-cdn.com/content/v1/624b503d84c2ba7dc187a92a/1649102938080-4ZOZGSNDL8NE36JY5URS/image-asset.jpeg"
-            alt="Our Office"
-            width={600}
-            height={400}
-          />
+          <Image src={img} alt="Our Office" width={600} height={400} />
         </div>
         <div className={styles.textContainer}>
           <h2>Our Story</h2>
