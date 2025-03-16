@@ -7,6 +7,7 @@ export class ClothesService {
     try {
       return await this.prisma.clothes.findMany();
     } catch (error) {
+      logger.error(error);
       throw new Error("Something went wrong");
     }
   }
@@ -27,7 +28,7 @@ export class ClothesService {
       });
     } catch (error) {
       logger.error(error);
-      throw new Error("Failed to delete twit");
+      throw new Error("Failed to delete clothes");
     }
   }
   async editClothes(id: string, data: Partial<Clothes>): Promise<Clothes> {
@@ -40,7 +41,7 @@ export class ClothesService {
       });
     } catch (error) {
       logger.error(error);
-      throw new Error("Failed to update twit");
+      throw new Error("Failed to update clothes");
     }
   }
 }

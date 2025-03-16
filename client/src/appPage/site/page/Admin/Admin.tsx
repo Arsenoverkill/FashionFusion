@@ -15,7 +15,7 @@ const Admin = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       size: [0, 2, 4, 6],
-      quintity: 1,
+      quantity: 1,
       category: "Tops",
     };
     await postTodoMutatin(dressObj);
