@@ -39,4 +39,17 @@ clothesRouter.delete("/:id", async (req: Request, res: Response) => {
     return;
   }
 });
+
+clothesRouter.patch("/:id", async (req: Request, res: Response) => {
+  try {
+    const { id } = req.params;
+    const updateData = req.body;
+    const updateClothe = clothesService.editClothes(id, updateData);
+    res.status(200).json(updateClothe);
+    return;
+  } catch (error) {
+    res.status(500).json({ error: "Internal server error" });
+    return;
+  }
+});
 export default clothesRouter;
