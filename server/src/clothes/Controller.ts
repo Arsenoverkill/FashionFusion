@@ -28,4 +28,15 @@ clothesRouter.post("/", async (req: Request, res: Response) => {
   }
 });
 
+clothesRouter.delete("/:id", async (req: Request, res: Response) => {
+  try {
+    const { id } = req.params;
+    const deleteClothe = await clothesService.deleteClothes(id);
+    res.status(201).json(deleteClothe);
+    return;
+  } catch (error) {
+    res.status(500).json({ error: "Internal server error" });
+    return;
+  }
+});
 export default clothesRouter;
